@@ -1,6 +1,6 @@
 import { select } from "d3";
 import { debounce } from "lodash-es";
-import { loadAndProcessData } from "./loadAndProcessData";
+import { loadAndProcessData } from "./js/loadAndProcessData";
 // import LocomotiveScroll from "locomotive-scroll";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
