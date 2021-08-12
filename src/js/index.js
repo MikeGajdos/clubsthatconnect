@@ -1,7 +1,5 @@
 import { select } from "d3";
-import { debounce } from "lodash-es";
 import { loadAndProcessData } from "./loadAndProcessData";
-// import LocomotiveScroll from "locomotive-scroll";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "splitting/dist/splitting.css";
