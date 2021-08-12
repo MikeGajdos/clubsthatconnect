@@ -1,4 +1,4 @@
-import images from "../images/*.svg";
+import images from "../../images/*.svg";
 import {
   select,
   scaleLinear,

@@ -1,8 +1,8 @@
 import { json } from "d3";
-import { chartDataProcessor } from "./chart/chartDataProcessor";
-import { graphDataProcessor } from "./graph/graphDataProcessor";
-import { chordDataProcessor } from "./chord/chordDataProcessor";
-import { mapDataProcessor } from "./map/mapDataProcessor";
+import { chartDataProcessor } from "./js/chart/chartDataProcessor";
+import { graphDataProcessor } from "./js/graph/graphDataProcessor";
+import { chordDataProcessor } from "./js/chord/chordDataProcessor";
+import { mapDataProcessor } from "./js/map/mapDataProcessor";
 
 export const loadAndProcessData = () =>
   Promise.all([
