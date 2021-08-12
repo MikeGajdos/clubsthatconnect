@@ -1,0 +1,450 @@
+:root{
+  --line-height: 1.5;
+  --bg-color-primary : rgba(66, 228, 131, 1);
+  --bg-color-secondary :rgba(11, 63, 131, 0.8);
+  --linear-gradient : linear-gradient(
+    180deg,
+    var(--bg-color-secondary),
+   var(--bg-color-primary)
+  );
+  --radial-gradient : radial-gradient(
+    circle,
+    rgb(255, 255, 255) 25%,
+    var(--bg-color-primary) 50%,
+    var(--bg-color-primary) 100%
+  );
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 1rem;
+  line-height: var(--line-height);
+  /* background-color: rgba(66, 228, 131, 1); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(11, 63, 131, 0.8);
+}
+ul {
+  list-style: none;
+}
+.chordCard ul {
+  padding-inline-start: 20px;
+}
+/* /////////////////////////////////////////////////// */
+/* ------------- UTILITY CLASSES----------------------- */
+/* /////////////////////////////////////////////////// */
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.instruction {
+  position: absolute;
+  top: 0;
+  left: 1.5rem; 
+}
+.instruction span {
+  display: block;
+}
+.footnote {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  width: 25vmax;
+}
+.footnoteText{
+  text-align: right;
+}
+.footnoteText span {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  font-size: 2rem;
+}
+/* /////////////////////////////////////////////////// */
+/* ------------- HEADER SECTION--------------------------- */
+/* /////////////////////////////////////////////////// */
+
+.headerSection {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--linear-gradient);
+}
+.headerSection > * {
+  flex: 1 1 512px;
+}
+.header-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 9vw;
+}
+.image-wrapper {
+  visibility: hidden;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform-origin: left;
+}
+.header-title {
+  font-size: clamp(2.5rem, 10vw, 3.75rem);
+  line-height: 1;
+  word-spacing: 0ch;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-subtitle {
+  font-size: clamp(1rem, 10vw, 1.5rem);
+  line-height: 1.5;
+  overflow: hidden;
+}
+/* /////////////////////////////////////////////////// */
+/* -------------MAP SECTION--------------------------- */
+/* /////////////////////////////////////////////////// */
+
+.mapSection {
+  background: var(--bg-color-primary);
+}
+.mapSection .instruction {
+  top: 3.5rem
+}
+#map {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-color-primary);
+}
+.country-label {
+  font-size: 0.5em;
+}
+.sphere {
+  fill: var(--bg-color-primary);
+  width: 100vw;
+}
+.country {
+  stroke: black;
+  stroke-opacity: 0.1;
+  cursor: pointer;
+}
+.mapTooltip {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* ////////////////////////////////////////////////// */
+/* -------------CHORD SECTION------------------------ */
+/* ////////////////////////////////////////////////// */
+
+.chordSection {
+  background: var(--radial-gradient);
+}
+#chord {
+  width: 100%;
+  height: 100vh;
+}
+
+.chordCard {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  background: rgba(255, 255, 255, 0.3);
+  width: 20%;
+  padding: 1em;
+  border-radius: 1em;
+  visibility: hidden;
+  z-index: 1;
+}
+.chordCard-image {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1.5em;
+}
+
+.chordCard-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.chordCard h2 {
+  font-size: 1rem;
+}
+
+/* ////////////////////////////////////////////////// */
+/* -------------GRAPH SECTION------------------------ */
+/* ////////////////////////////////////////////////// */
+
+.graphSection {
+  background: var(--radial-gradient)
+}
+#graph {
+  width: 100%;
+  height: 100vh;
+}
+
+/* ////////////////////////////////////////////////// */
+/* -------------CHARTS SECTION------------------------ */
+/* ////////////////////////////////////////////////// */
+
+.chartSection {
+  background:var(--bg-color-primary);
+}
+.chartsContainer {
+  /* flex: 1; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chartsContainer > * {
+  flex: 1 1 512px;
+}
+#mostPlayersChart {
+  padding: 1.5vw;
+  height: 50vh;
+}
+#mostConnectedChart {
+  padding: 1.5vw;
+  height: 50vh
+}
+.xAxisLabel,
+.yAxisLabel,
+.titleAxisLabel {
+  font-weight: 600;
+}
+.titleAxisLabel {
+  font-size: 1.25em;
+}
+
+/* ////////////////////////////////////////////////// */
+/* -------------ACKNOWLEEDGEMENT SECTION------------------------ */
+/* ////////////////////////////////////////////////// */
+.acknowledgementSection {
+  background: var(--bg-color-primary);
+  padding: 1.5rem;
+}
+.acknowledgementDescription {
+  margin: 0 auto;
+  padding: 1.5vw;
+  width: fit-content;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+h4 {
+  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+}
+
+.acknowledgementSection p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+ 
+}
+ul.dataVis-list {
+  list-style: none;
+}
+li > a {
+  font-size: clamp(1.25rem, 4.5vw, 1.5rem);
+  font-weight: 600;
+}
+.dataVis-description {
+  padding-left: 1.5rem;
+}
+.ball {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ////////////////////////////////////////////////// */
+/* -------------FOOTER------------------------ */
+/* ////////////////////////////////////////////////// */
+
+footer {
+  background: var(--bg-color-primary);
+}
+.footer {
+  font-size: 1rem;
+  text-align: center;
+}
+.feather {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+.social-links-list {
+  display: flex;
+  justify-content: center;
+}
+
+/* ///////////////////////////////////////////////// */
+
+.line-path {
+  fill: none;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  mix-blend-mode: multiply;
+}
+
+text {
+  font-family: sans-serif;
+}
+.tick {
+  cursor: pointer;
+}
+.tick line {
+  stroke: "black";
+}
+.axis-label {
+  font-size: 5em;
+  fill: #8e8883;
+}
+.title {
+  font-size: 2.7em;
+  fill: #635f5d;
+}
+
+
+@media (max-width: 1028px) {
+  .header-text-wrapper {
+    padding : 1.5rem ;
+    text-align: center;
+  }
+  .chordCard{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    /* background-image: rgba(255,255,255,0.3); */
+    background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url("../images/soccer-ball.svg");
+    background-size: cover;
+
+    width: 50vw;
+    max-width: 400px;
+    height: 50vw;
+    max-height: 400px;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+}
+.chordCard-inner {
+  padding: 1vw;
+  background: rgba(255, 255, 255, 0.8);
+
+}
+.nationSguad-list.rotw {
+  margin-left: 1.5rem;
+  column-count: 1;
+}
+.chordCard-content.rotw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chordCard-header.rotw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media (max-width: 768px) {
+  .country-label{
+    opacity: 0;
+  }
+  .footnote {
+    line-height: 1.25;
+  }
+  .chordCard{
+      max-width: 375px;
+      max-height: 375px;
+  }
+  .nationSguad-list.rotw {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .chordCard {
+    top: 80%;
+    left: 1.5rem;
+    transform: translateX(0);
+    /* transform: translateX(-50%); */
+    background: rgba(255, 255, 255, 0.5);
+    padding:   1em;
+    border-radius: 1em;
+    width: 90%;
+    height: fit-content;
+    display: block;
+  }
+  .chordCard-inner {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    line-height: 1.25;
+  }
+  .chordCard-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  .chordCard-header.rotw  > *{
+    display: inline;
+  }
+}
+
+@media (max-width: 414px) {
+  .titleAxisLabel {
+    font-size: 1em;
+  }
+  .xAxisLabel,
+  .yAxisLabel {
+    font-size: 0.75em;
+  }
+ 
+}
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./index.js"></script>
+    <title>Clubs that connect</title>
+  </head>
+  <body>
+    <div data-scroll-container class="container">
+      <header class="headerSection pSection">
+        <div
+          class="header-text-wrapper pSection"
+          data-scroll
+          data-scroll-speed="1"
+        >
+          <h1 class="header-title reveal-text">Clubs that connect</h1>
+          <p class="header-subtitle reveal-text">
+            A Little visualition with graphs that demonstrates how clubs connect
+            nations in the Euro 2020 tournament.
+          </p>
+        </div>
+        <div class="image-wrapper pImage" data-scroll data-scroll-speed="3">
+          <img
+            src="./images/UEFAEuro2020.png"
+            alt="euro2020logo"
+            class="title-image"
+          />
+        </div>
+      </header>
+      <section class=" section mapSection">
+        <div class="instruction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51"  height="51"viewBox="0 0 51.798 51.798">
+            <g fill="#010002">
+              <circle cx="30.563" cy="4.754" r="4.754"/>
+              <circle  cx="8.493" cy="36.964" r="4.002"/>
+              <path d="M47.259 26.37c-1.654-9.193-8.684-14.797-17.738-15.824a2.518 2.518 0 00-1.092.098 2.567 2.567 0 00-1.007-.098c-4.129.367-7.68 3.463-10.246 6.538-2.151 2.576 1.538 6.308 3.708 3.708 1.098-1.315 2.765-3.258 4.546-4.296.015.049.023.099.04.149 1.153 3.42 1.483 6.792 1.15 10.368a38.669 38.669 0 00-3.786 1.742c-1.655.862-3.702 1.751-4.357 3.61L14.534 43.55c-1.127 3.198 3.941 4.562 5.058 1.396l3.668-10.404c1.814-1.16 3.834-2.289 5.926-2.986a4.723 4.723 0 002.08.557c.049 0 .094-.004.142-.006.301 5.703.534 11.41.778 17.113.145 3.361 5.391 3.48 5.244.094-.332-7.789-.646-15.584-1.138-23.366a3.217 3.217 0 00-.075-.499 31.628 31.628 0 00-.625-7.686c3.479 2.052 5.803 5.52 6.607 10.006.601 3.321 5.653 1.908 5.06-1.399z"/>
+            </g>
+          </svg>
+          <span><strong>Hover</strong> on the country</span>
+          <span><strong>Click</strong> on the legend</span>
+          <span>to see the details</span>
+        
+         
+        </div>
+        <div id="map"></div>
+        <div class="footnote">
+          <p class="footnoteText">
+            <span> ⚽️</span>
+            Both Welsh clubs (Cardiff City and Swansea City) represented at Euro 2020 
+            compete in England.
+            <br />
+          </p>
+        </div>
+      </section>
+      <section class=" section chordSection"> 
+        <div class="instruction">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="48px" height="48px" viewBox="0 0 940.838 940.838" style="enable-background:new 0 0 940.838 940.838;"
+          xml:space="preserve">
+       <g>
+         <g>
+           <path d="M382.587,0c-4.993,0-9.818,1.808-13.587,5.089L169.716,178.671c-8.603,7.495-9.505,20.592-2.013,29.193l233.002,267.501
+             l11.754,13.494l11.95,13.721c-9.571,0.99-19.716,2.354-29.751,4.23c-36.883,6.906-60.356,18.801-64.404,32.631
+             c-1.296,4.422-3.096,21.168,8.113,81.021c6.888,36.775,17.64,84.287,31.958,141.211c19.545,77.701,40.511,152.033,48.263,179.164
+             h156.069l13.769-255.023c0,0-19.079-177.572-21.125-197.01c-1.089-10.344-3.327-21.193-3.327-31.594l-1.738-16.506v-0.813
+             c0-3.202-0.444-6.3-1.258-9.247c-4.062-14.703-17.547-25.534-33.523-25.534c-19.178,0-34.78,15.604-34.78,34.781v19.785
+             c0,62.324-0.483,124.646-0.483,186.968c0,5.014-2.505,9.695-6.675,12.479c-2.502,1.67-5.404,2.521-8.326,2.521
+             c-1.948,0-3.905-0.379-5.758-1.148c-2.896-1.203-28.484-12.432-34.621-35.354c-2.349-8.771-2.627-22.52,9.381-38.197
+             c0.202-0.264,0.413-0.52,0.632-0.77l15.367-17.52l-0.483-56.754l-9.898-11.363l-12.457-14.303l-12.241-14.053L185.152,194.402
+             L382.464,22.538l28.205,32.381l11.42-3.638l11.419-3.637L398.193,7.102C394.263,2.588,388.574,0,382.587,0z"/>
+           <path id="letssee" d="M598.015,514.172l8.687,82.496h0.751c13.307,0,24.003-4.711,31.795-13.998c6.657-7.938,10.633-18.947,10.633-29.453
+             c0-23.355-21.938-39.045-42.428-39.045H598.015z"/>
+           <path d="M777.753,420.025L647.973,12.592c-1.313-4.123-5.125-6.754-9.232-6.753c-0.975,0-1.966,0.148-2.943,0.459l-186.545,59.42
+             l-11.419,3.638l-11.421,3.638l-42.431,13.515c-5.1,1.625-7.917,7.076-6.293,12.177l89.89,282.202l6.562,20.6
+             c1.286-1.779,2.656-3.495,4.108-5.135c7.479-8.441,17.088-14.945,27.979-18.672c6.665-2.28,13.801-3.537,21.229-3.537
+             c16.688,0,31.271,6.257,42.162,16.54c5.933,5.6,10.771,12.391,14.249,20.024c1.618,3.549,2.933,7.282,3.938,11.157
+             c1.065,4.107,1.772,8.375,2.092,12.767c0.106,1.453,0.186,2.915,0.204,4.394l5.19,49.291l9.315-2.967l14.372-4.578l152.479-48.569
+             C776.561,430.577,779.378,425.125,777.753,420.025z"/>
+         </g>
+        </g>
+       </svg>
+          <span>Hover</span>
+          <span>Inner Circle :</span>
+          <span>Country's Players club location</span>
+          <span>Outer Circle :</span>
+          <span> Country's Players Summary</span>
+        </div>
+        <div id="chord"></div>
+        <div class="footnote">
+          <p class="footnoteText">
+            <span> ⚽️</span>
+            ROTW = Rest of the World <br>
+            List of country leagues outside Euro2020 participating nations
+          </p>
+        </div>
+      
+        </div>
+      </section>
+      <section class="section graphSection">
+        <div class="instruction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51"  height="51"viewBox="0 0 51.798 51.798">
+            <g fill="#010002">
+              <circle cx="30.563" cy="4.754" r="4.754"/>
+              <circle  cx="8.493" cy="36.964" r="4.002"/>
+              <path d="M47.259 26.37c-1.654-9.193-8.684-14.797-17.738-15.824a2.518 2.518 0 00-1.092.098 2.567 2.567 0 00-1.007-.098c-4.129.367-7.68 3.463-10.246 6.538-2.151 2.576 1.538 6.308 3.708 3.708 1.098-1.315 2.765-3.258 4.546-4.296.015.049.023.099.04.149 1.153 3.42 1.483 6.792 1.15 10.368a38.669 38.669 0 00-3.786 1.742c-1.655.862-3.702 1.751-4.357 3.61L14.534 43.55c-1.127 3.198 3.941 4.562 5.058 1.396l3.668-10.404c1.814-1.16 3.834-2.289 5.926-2.986a4.723 4.723 0 002.08.557c.049 0 .094-.004.142-.006.301 5.703.534 11.41.778 17.113.145 3.361 5.391 3.48 5.244.094-.332-7.789-.646-15.584-1.138-23.366a3.217 3.217 0 00-.075-.499 31.628 31.628 0 00-.625-7.686c3.479 2.052 5.803 5.52 6.607 10.006.601 3.321 5.653 1.908 5.06-1.399z"/>
+            </g>
+          </svg>
+          <span>Hover on the club</span>
+          <span>to see the links</span>
+        
+         
+        </div>
+        <div class="footnote">
+          <p class="footnoteText">
+            <span> ⚽️</span>
+            Only the clubs with more than 1 player at Euro2020 are displayed in
+            this graph
+          </p>
+        </div>
+        <div id="graph"></div>
+      </section>
+      <section class=" section chartSection">
+        <div class="chartsContainer">
+          <div id="mostPlayersChart"></div>
+          <div id="mostConnectedChart"></div>
+        </div>
+      </section>
+      <section class="acknowledgementSection">
+        <div class="acknowledgementDescription">
+          <h3 class="acknowledgement-title">Acknowledgements</h3>
+          <div class="acknowledgement-data">
+            <h4 class="data">Data :</h4>
+            <p class="data">
+              Original Euro2020 data came from
+              <a class="acknowledgement-link" href="https://en.wikipedia.org/wiki/UEFA_Euro_2020_squads" target="_blank"> Wikipedia.</a>
+            </p>
+          </div>
+          <div class="acknowledgement-dataVis">
+            <h4 class="dataVis">Data Visualisation :</h4>
+            <p class="dataVis-subtitle">
+              A list of a great resources for learning D3.js which helped me built this site 
+            </p>
+            <ul class="dataVis-list">
+              <li class="dataVis-item">
+                <img src="./images/soccer-ball.svg" alt="soccer-ball" class="ball">
+                <a class="acknowledgement-link " href="https://netninja.dev/" target="_blank"
+                  >NetNija
+                </a>
+                <p class="dataVis-description">
+                  <a class="acknowledgement-link inline" href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" target="_blank"> Shaun</a> with his great
+                  D3.js Udemy course. A perfect intro in D3.js world
+                </p>
+              </li>
+              <li class="dataVis-item">
+                <img src="./images/soccer-ball.svg" alt="soccer-ball" class="ball">
+                  <a class="acknowledgement-link" href="https://twitter.com/currankelleher" target="_blank"> Curran Kelleher</a>
+               
+                <p class="dataVis-description">
+                  Curran has two awesome
+                  <a class="acknowledgement-link inline" href="https://www.youtube.com/user/currankelleher" target="_blank"> YouTube</a> series on
+                  D3.js
+                </p>
+              </li>
+              <li class="dataVis-item">
+                <img src="./images/soccer-ball.svg" alt="soccer-ball" class="ball">
+                  <a class="acknowledgement-link" href="https://www.d3indepth.com/" target="_blank"> D3 in Depth
+                  </a>
+               
+                <p class="dataVis-description">
+                  <a class="acknowledgement-link" href="https://www.peterrcook.com/" target="_blank"> Peter Cook's</a> site is a
+                  wicked tool to learn D3.js
+                </p>
+              </li>
+              <li class="dataVis-item">
+                <img src="./images/soccer-ball.svg" alt="soccer-ball" class="ball">
+                  <a class="acknowledgement-link" href="https://www.d3-graph-gallery.com/" target="_blank"> D3 Graph Gallery</a>
+              
+                <p class="dataVis-description">
+                  <a class="acknowledgement-link" href="https://twitter.com/R_Graph_Gallery" target="_blank"> Yan's</a> site with its
+                  plethora of examples is definitely goto site
+                </p>
+              </li>
+              <li class="dataVis-item">
+                <img src="./images/soccer-ball.svg" alt="soccer-ball" class="ball">
+                <a class="acknowledgement-link" href="https://observablehq.com/" target="_blank"> Observable</a>
+                <p class="dataVis-description">
+                  <a class="acknowledgement-link" href="https://bost.ocks.org/mike/" target="_blank">Mike Bostock</a
+                  > Observable is without a doubt a great resourse for inspiration
+                  and guidance
+                </p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+       
+      </section>
+      <hr>
+      <footer>
+        <p class="footer">Designed and built by Mike Gajdos</p>
+        <ul class="social-links-list">
+          <li class="social-link">
+            <a href="#" class="social">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                
+
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                class="feather feather-github"
+              >
+                <title>GitHub</title>
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link">
+            <a href="#" class="social">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                id="twitter"
+              
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                class="feather feather-twitter"
+              >
+                <title>Twitter</title>
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </footer>
+
+      <!-- // "scripts": {
+      //   "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+      //   "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
+      //   "clean": "rimraf ./development && rimraf ./.cache"
+      // }, -->
+    </div>
+
+  
+ 
+  
+  </body>
+</html>
