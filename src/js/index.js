@@ -1,17 +1,17 @@
 import { select } from "d3";
 import { debounce } from "lodash-es";
-import { loadAndProcessData } from "./js/loadAndProcessData";
+import { loadAndProcessData } from "./loadAndProcessData";
 // import LocomotiveScroll from "locomotive-scroll";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
-import { headerAnimation } from "./js/animations/animations";
-import { map } from "./js/map/map";
-import { drawChart } from "./js/chart/drawChart";
-import { drawGraph } from "./js/graph/drawGraph";
-import { drawChord } from "./js/chord/chord";
+import { headerAnimation } from "./animations/animations";
+import { map } from "./map/map";
+import { drawChart } from "./chart/drawChart";
+import { drawGraph } from "./graph/drawGraph";
+import { drawChord } from "./chord/chord";
 gsap.registerPlugin(ScrollTrigger);
 
 let revealText = document.querySelectorAll(".reveal-text");
