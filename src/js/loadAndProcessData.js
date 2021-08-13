@@ -7,13 +7,13 @@ import { mapDataProcessor } from "./map/mapDataProcessor";
 export const loadAndProcessData = () =>
   Promise.all([
     json(
-      "https://raw.githubusercontent.com/aquablue8200/maps/master/Uefa.topo.json"
+      "https://raw.githubusercontent.com/MikeGajdos/topodata/main/uefa.topo.json"
     ),
     json(
       "https://gist.githubusercontent.com/MikeGajdos/906a9445ecdf2b86fd83433589a560e2/raw/12e5b796bc6c54eee4123b13402d4808c5ea2a72/euro.json"
     ),
   ]).then(([rawData, euroData]) => {
-    console.log(rawData)
+    
     const mapData = mapDataProcessor(rawData, euroData);
     const [chordMatrix, leaguesArray, chordTooltipROTWDataMap] =
       chordDataProcessor(euroData);

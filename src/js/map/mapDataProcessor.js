@@ -4,6 +4,7 @@ import { mapLegendGrouping } from "../utils/helpers";
 
 export const mapDataProcessor = (rawtopoJSONdata, data) => {
   const topoJSONdata = rawtopoJSONdata;
+  
 
   const sortedData = rollup(
     data.map((country) => [...country.players]).flat(),
@@ -24,11 +25,14 @@ export const mapDataProcessor = (rawtopoJSONdata, data) => {
     sortedArray.map((obj) => [obj.key, mapLegendGrouping(obj.value)])
   );
 
-  const countries = feature(topoJSONdata, topoJSONdata.objects.europe);
+ 
 
-  let mapData = countries.features.filter(
-    (feature) => feature.properties.continent === "Europe" || feature.id
-  );
+  const countries = feature(topoJSONdata, topoJSONdata.objects.europe);
+  
+  let mapData = countries.features;
+  // let mapData = countries.features.filter(
+  //   (feature) => feature.properties.continent === "Europe" || feature.id
+  // );
   mapData.forEach((d) => {
     const computedProps = {
       value: euroDataMap.get(d.properties.name) || 0,
