@@ -27,6 +27,7 @@
   "dependencies": {
     "d3": "^6.7.0",
     "gsap": "^3.7.1",
+    "parcel-plugin-ogimage": "^1.2.0",
     "splitting": "^1.0.6",
     "topojson-client": "^3.1.0"
   }
