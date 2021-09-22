@@ -31,7 +31,6 @@ results.forEach((splitResult) => {
   splitResult.el.innerHTML = wrappedLines;
 });
 
-
 let selectedColorValue;
 let selectedCountry;
 let dataGeo;
@@ -87,27 +86,32 @@ const initChordParams = () => {
     .attr("class", "chordCard");
   chordWidth = chordDiv.getBoundingClientRect().width;
   chordHeight = chordDiv.getBoundingClientRect().height;
-  const chordVieBox = Math.min(chordWidth,chordHeight)
+  const chordVieBox = Math.min(chordWidth, chordHeight);
   // chordHeight = chordWidth
   const chordContainerSvg = select("#chord")
     .append("svg")
     .attr("class", "chordSvg")
     .attr("width", "100%")
     .attr("height", "100%")
-   
+
     // .attr("preserveAspectRatio", "xMidYMid")
-    .attr("viewBox", [-chordVieBox/2 , -chordVieBox / 2, chordVieBox, chordVieBox]);
-    // .attr("viewBox", [-chordWidth / 2, -chordHeight / 2, chordWidth, chordHeight]);
-    // .attr("viewBox", `0 0  ${chordWidth} ${chordHeight}`);
+    .attr("viewBox", [
+      -chordVieBox / 2,
+      -chordVieBox / 2,
+      chordVieBox,
+      chordVieBox,
+    ]);
+  // .attr("viewBox", [-chordWidth / 2, -chordHeight / 2, chordWidth, chordHeight]);
+  // .attr("viewBox", `0 0  ${chordWidth} ${chordHeight}`);
 
   const chordSvgInner = chordContainerSvg
     .append("g")
-    .attr("class", "chordGroupInner")
-    // .attr("transform", `translate(${chordWidth / 2}, ${chordHeight / 2})`);
+    .attr("class", "chordGroupInner");
+  // .attr("transform", `translate(${chordWidth / 2}, ${chordHeight / 2})`);
   const chordSvgOuter = chordContainerSvg
     .append("g")
-    .attr("class", "chordGroupOuter")
-    // .attr("transform", `translate(${chordWidth / 2}, ${chordHeight / 2})`);
+    .attr("class", "chordGroupOuter");
+  // .attr("transform", `translate(${chordWidth / 2}, ${chordHeight / 2})`);
 
   return {
     chordDiv,
@@ -131,12 +135,12 @@ const initGraphParams = () => {
     .attr("width", "100%")
     .attr("height", "100%")
     // .attr("preserveAspectRatio", "xMidYMid")
-    .attr("viewBox", [-20, 0, graphVieboxParam,graphVieboxParam]);
+    .attr("viewBox", [-20, 0, graphVieboxParam, graphVieboxParam]);
 
   const graphGroupContainer = graphSvg
     .append("g")
-    .attr("class", "graphGroupContainer")
-    // .attr("transform", `translate(${graphMargin},${graphMargin} )`);
+    .attr("class", "graphGroupContainer");
+  // .attr("transform", `translate(${graphMargin},${graphMargin} )`);
 
   const countryNodesCircle = graphGroupContainer
     .append("circle")
@@ -335,5 +339,3 @@ var webpageheight = Math.max(
   html.scrollHeight,
   html.offsetHeight
 );
-
-console.log(webpageheight);

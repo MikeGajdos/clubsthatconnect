@@ -28,10 +28,8 @@ export const graphDataProcessor = (data) => {
       .sort((a, b) => b[1] - a[1])
       .filter((club) => club[1] > 1)
   );
-  // console.log(filteredSortedTeamMap);
 
   const clubNamesSet = new Set([...filteredSortedTeamMap.keys()]);
-  // console.log(clubNamesSet);
 
   const clubNodes = Array.from(clubNamesSet).map((club) => {
     return {
@@ -86,24 +84,12 @@ export const graphDataProcessor = (data) => {
     });
     playerNodes.push(...eachCountryPlayersNodes);
     playerLinks.push(...eachCountryPlayerLinks);
-    // console.log("-----nodes-----");
-    // console.log(eachCountryPlayersNodes);
-    // console.log("------links-------");
-    // console.log(eachCountryPlayerLinks);
   });
 
   const allNodes = [...countryNodes, ...playerNodes, ...clubNodes];
 
   const links = [...playerLinks, ...clubLinks];
   let linkedByIndex = {};
-  // for (let i = 0; i < allNodes.length; i++) {
-  //   linkedByIndex[i + "," + i] = 1;
-  // }
-  // console.log(links);
-  // links.forEach((link) => {
-  //   linkedByIndex[`${link.source.index},${link.target.index}`] = 1;
-  // });
-  // console.log(linkedByIndex);
 
   return [allNodes, countryNodes, playerNodes, clubNodes, links, linkedByIndex];
 };

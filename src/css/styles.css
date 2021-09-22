@@ -1,13 +1,13 @@
-:root{
+:root {
   --line-height: 1.5;
-  --bg-color-primary : rgba(66, 228, 131, 1);
-  --bg-color-secondary :rgba(11, 63, 131, 0.8);
-  --linear-gradient : linear-gradient(
+  --bg-color-primary: rgba(66, 228, 131, 1);
+  --bg-color-secondary: rgba(11, 63, 131, 0.8);
+  --linear-gradient: linear-gradient(
     180deg,
     var(--bg-color-secondary),
-   var(--bg-color-primary)
+    var(--bg-color-primary)
   );
-  --radial-gradient : radial-gradient(
+  --radial-gradient: radial-gradient(
     circle,
     rgb(255, 255, 255) 25%,
     var(--bg-color-primary) 50%,
@@ -64,7 +64,7 @@ ul {
 .instruction {
   position: absolute;
   top: 0;
-  left: 1.5rem; 
+  left: 1.5rem;
 }
 .instruction span {
   display: block;
@@ -75,7 +75,7 @@ ul {
   right: 1.5rem;
   width: 25vmax;
 }
-.footnoteText{
+.footnoteText {
   text-align: right;
 }
 .footnoteText span {
@@ -132,6 +132,7 @@ img {
   line-height: 1.5;
   overflow: hidden;
 }
+
 /* /////////////////////////////////////////////////// */
 /* -------------MAP SECTION--------------------------- */
 /* /////////////////////////////////////////////////// */
@@ -140,7 +141,7 @@ img {
   background: var(--bg-color-primary);
 }
 .mapSection .instruction {
-  top: 3.5rem
+  top: 3.5rem;
 }
 #map {
   width: 100%;
@@ -214,7 +215,7 @@ img {
 /* ////////////////////////////////////////////////// */
 
 .graphSection {
-  background: var(--radial-gradient)
+  background: var(--radial-gradient);
 }
 #graph {
   width: 100%;
@@ -226,7 +227,7 @@ img {
 /* ////////////////////////////////////////////////// */
 
 .chartSection {
-  background:var(--bg-color-primary);
+  background: var(--bg-color-primary);
 }
 .chartsContainer {
   /* flex: 1; */
@@ -246,7 +247,7 @@ img {
 }
 #mostConnectedChart {
   padding: 1.5vw;
-  height: 50vh
+  height: 50vh;
 }
 .xAxisLabel,
 .yAxisLabel,
@@ -273,16 +274,15 @@ img {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-h3 {
+h2 {
   font-size: clamp(1.5rem, 6vw, 2.25rem);
 }
-h4 {
+h3 {
   font-size: clamp(1.25rem, 4.5vw, 1.75rem);
 }
 
 .acknowledgementSection p {
   font-size: clamp(1rem, 3vw, 1.25rem);
- 
 }
 ul.dataVis-list {
   list-style: none;
@@ -348,20 +348,22 @@ text {
   fill: #635f5d;
 }
 
-
 @media (max-width: 1028px) {
   .header-text-wrapper {
-    padding : 1.5rem ;
+    padding: 1.5rem;
     text-align: center;
   }
-  .chordCard{
+  .chordCard {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%);
     /* background-image: rgba(255,255,255,0.3); */
-    background-image: 
-    linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
-    url("../images/soccer-ball.svg");
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url("../images/soccer-ball.svg");
     background-size: cover;
 
     width: 50vw;
@@ -372,38 +374,37 @@ text {
 
     display: grid;
     place-items: center;
-}
-.chordCard-inner {
-  padding: 1vw;
-  background: rgba(255, 255, 255, 0.8);
-
-}
-.nationSguad-list.rotw {
-  margin-left: 1.5rem;
-  column-count: 1;
-}
-.chordCard-content.rotw {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.chordCard-header.rotw {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  }
+  .chordCard-inner {
+    padding: 1vw;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .nationSguad-list.rotw {
+    margin-left: 1.5rem;
+    column-count: 1;
+  }
+  .chordCard-content.rotw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chordCard-header.rotw {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
-  .country-label{
+  .country-label {
     opacity: 0;
   }
   .footnote {
     line-height: 1.25;
   }
-  .chordCard{
-      max-width: 375px;
-      max-height: 375px;
+  .chordCard {
+    max-width: 375px;
+    max-height: 375px;
   }
   .nationSguad-list.rotw {
     column-count: 2;
@@ -411,13 +412,16 @@ text {
 }
 
 @media (max-width: 550px) {
+  .instruction {
+    line-height: normal;
+  }
   .chordCard {
-    top: 80%;
+    top: 72%;
     left: 1.5rem;
     transform: translateX(0);
     /* transform: translateX(-50%); */
     background: rgba(255, 255, 255, 0.5);
-    padding:   1em;
+    padding: 1em;
     border-radius: 1em;
     width: 90%;
     height: fit-content;
@@ -432,7 +436,7 @@ text {
     display: flex;
     justify-content: space-around;
   }
-  .chordCard-header.rotw  > *{
+  .chordCard-header.rotw > * {
     display: inline;
   }
 }
@@ -445,6 +449,4 @@ text {
   .yAxisLabel {
     font-size: 0.75em;
   }
- 
 }
-
