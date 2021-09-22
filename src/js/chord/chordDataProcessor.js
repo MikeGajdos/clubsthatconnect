@@ -51,7 +51,5 @@ export const chordDataProcessor = (data) => {
     }))
     .sort((a, b) => b.value - a.value);
 
-  // console.log(matrix);
-
   return [matrix, leagueNamesArray, chordTooltipROTWDataMap];
 };

@@ -12,7 +12,6 @@ export const chartDataProcessor = (data) => {
       return modNationality;
     })
     .flat();
-  console.log(playersArray);
 
   const clubGroupMap = rollup(
     playersArray,
@@ -43,9 +42,8 @@ export const chartDataProcessor = (data) => {
 
   function stringMod(string) {
     let clubName = string.split(" ");
-    if( clubName.length > 1 && clubName[1] === "Dortmund") {
+    if (clubName.length > 1 && clubName[1] === "Dortmund") {
       clubName[0] = "B.";
-      console.log("i ran")
     }
     if (clubName[0] === "Internazionale") {
       clubName[0] = "Inter Milan";
@@ -62,7 +60,7 @@ export const chartDataProcessor = (data) => {
   clubData.forEach((club) => {
     club.key = stringMod(club.key);
   });
-  console.log(clubData);
+
   connectedClubData.forEach((club) => {
     club.key = stringMod(club.key);
   });
